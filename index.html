@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colour Reaction Time Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Colour Reaction Time Test</h1>
+    <p class="intro">Choose a target colour and press Start. Five flashes will appear after random waits of 1–10 seconds. Click the circle only when it matches your target.</p>
+    <div class="controls">
+      <label for="target">Your target:</label>
+      <select id="target">
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+        <option value="both">Both colours</option>
+      </select>
+      <button id="start" type="button">Start test</button>
+      <button id="download" type="button" disabled>Download CSV</button>
+    </div>
+    <div id="stage" aria-label="Reaction test stimulus"><div id="stimulus"></div></div>
+    <div id="status" role="status" aria-live="polite">Select a target colour, then start when you are ready.</div>
+    <div id="summary"></div>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
